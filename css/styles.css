@@ -45,7 +45,7 @@ html {
 }
 
 h1 {
-    color: #6fce91;
+    color: var(--translator-color);
     font-family: var(--font);
     font-weight: lighter;
     font-size: 2.5rem;
