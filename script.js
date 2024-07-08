@@ -5,6 +5,10 @@ const btnDecrypt = document.querySelector("#decode_btn");
 const outMessage = document.querySelector("#outMessage");
 const btnCopy = document.querySelector("#copy_btn");
 
+
+// Configuración inicial de la imagen de fondo en outMessage
+outMessage.style.backgroundImage = "url('./Images/lock.png')";
+
 inputVerificar();
 
 // Captura el id en el momento del click y direcciona el programa para el método que encripta el texto
@@ -34,7 +38,7 @@ btnCopy.onclick = (e) => {
         // Una vez copiado, mueve el texto a txt_input
         input.value = outMessage.value;
         outMessage.value = "";
-        outMessage.style.backgroundImage = "url('../Images/lock.png')"; // Restablecer la imagen de fondo
+        outMessage.style.backgroundImage = "url('./Images/lock.png')"; // Restablecer la imagen de fondo
     }).catch(err => {
         console.error('Error al copiar el texto: ', err);
     });
@@ -68,5 +72,3 @@ function inputVerificar() {
     });
 }
 
-// Configuración inicial de la imagen de fondo en outMessage
-outMessage.style.backgroundImage = "url('../Images/lock.png')";
