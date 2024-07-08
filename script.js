@@ -13,7 +13,7 @@ btnEncrypt.onclick = (e) => {
     const encodedTxt = encrypt(input.value);
     outMessage.value = encodedTxt;
     input.value = "";
-    outMessage.style.backgroundImage = "none";
+    outMessage.style.backgroundImage = "none"; // Quitar la imagen de fondo al codificar
 }
 
 // Captura el id en el momento del click y direcciona el programa para el método que desencripta el texto
@@ -22,6 +22,7 @@ btnDecrypt.onclick = (e) => {
     const decodedTxt = decrypt(input.value);
     outMessage.value = decodedTxt;
     input.value = "";
+    outMessage.style.backgroundImage = "none"; // Quitar la imagen de fondo al decodificar
 }
 
 // Captura el id en el momento del click y hace la validación que copia el texto
@@ -33,7 +34,7 @@ btnCopy.onclick = (e) => {
         // Una vez copiado, mueve el texto a txt_input
         input.value = outMessage.value;
         outMessage.value = "";
-        outMessage.style.backgroundImage = "url('../Images/lock.png')";
+        outMessage.style.backgroundImage = "url('../Images/lock.png')"; // Restablecer la imagen de fondo
     }).catch(err => {
         console.error('Error al copiar el texto: ', err);
     });
